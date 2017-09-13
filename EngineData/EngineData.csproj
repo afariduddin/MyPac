@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B73C03EC-8292-40D6-9752-29DA2D0FB2AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EngineData</RootNamespace>
+    <AssemblyName>EngineData</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Teq.Data">
+      <HintPath>..\Library\Teq.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Teq.Lib">
+      <HintPath>..\Library\Teq.Lib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionLog.cs" />
+    <Compile Include="ActivityLog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActivityLog.Designer.cs">
+      <DependentUpon>ActivityLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActivityLogColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActivityLogColumn.Designer.cs">
+      <DependentUpon>ActivityLogColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActivityLogTransaction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActivityLogTransaction.Designer.cs">
+      <DependentUpon>ActivityLogTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdapterBase.cs" />
+    <Compile Include="AdapterBase.Designer.cs">
+      <DependentUpon>AdapterBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application.Designer.cs">
+      <DependentUpon>Application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationCourseSubject.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ApplicationCourseSubject.Designer.cs">
+      <DependentUpon>ApplicationCourseSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ApplicationDetail.Designer.cs">
+      <DependentUpon>ApplicationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssessmentResult.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssessmentResult.Designer.cs">
+      <DependentUpon>AssessmentResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssessmentResultDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssessmentResultDetail.designer.cs">
+      <DependentUpon>AssessmentResultDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssessmentSession.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssessmentSession.Designer.cs">
+      <DependentUpon>AssessmentSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssessmentSessionApplicant.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssessmentSessionApplicant.Designer.cs">
+      <DependentUpon>AssessmentSessionApplicant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssessmentSessionDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssessmentSessionDetail.Designer.cs">
+      <DependentUpon>AssessmentSessionDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Candidate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Candidate.Designer.cs">
+      <DependentUpon>Candidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidatePreferredCourse.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CandidatePreferredCourse.designer.cs">
+      <DependentUpon>CandidatePreferredCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coaching.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Coaching.Designer.cs">
+      <DependentUpon>Coaching.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidatePreferredCourseDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CandidatePreferredCourseDetail.designer.cs">
+      <DependentUpon>CandidatePreferredCourseDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoachingDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CoachingDetail.designer.cs">
+      <DependentUpon>CoachingDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoachingItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CoachingItem.Designer.cs" />
+    <Compile Include="Country.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Country.Designer.cs">
+      <DependentUpon>Country.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Course.Designer.cs">
+      <DependentUpon>Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseSubject.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CourseSubject.Designer.cs">
+      <DependentUpon>CourseSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseTSP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CourseTSP.Designer.cs">
+      <DependentUpon>CourseTSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseTSPDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CourseTSPDetail.Designer.cs">
+      <DependentUpon>CourseTSPDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DA.Designer.cs">
+      <DependentUpon>DA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailNotification.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EmailNotification.designer.cs">
+      <DependentUpon>EmailNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorCodes.cs" />
+    <Compile Include="GlobalSetting.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GlobalSetting.Designer.cs">
+      <DependentUpon>GlobalSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IActivityLog.cs" />
+    <Compile Include="IActivityLog.Designer.cs">
+      <DependentUpon>IActivityLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartTimerAssessmentResult.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PartTimerAssessmentResult.Designer.cs">
+      <DependentUpon>PartTimerAssessmentResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartTimerAssessmentResultDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PartTimerAssessmentResultDetail.Designer.cs">
+      <DependentUpon>PartTimerAssessmentResultDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartTimerAssessmentSession.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PartTimerAssessmentSession.Designer.cs">
+      <DependentUpon>PartTimerAssessmentSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartTimerAssessmentSessionApplicant.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PartTimerAssessmentSessionApplicant.Designer.cs">
+      <DependentUpon>PartTimerAssessmentSessionApplicant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartTimerAssessmentSessionDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PartTimerAssessmentSessionDetail.Designer.cs">
+      <DependentUpon>PartTimerAssessmentSessionDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permission.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Permission.Designer.cs">
+      <DependentUpon>Permission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports.cs" />
+    <Compile Include="RptAlumniVoluntaryHourSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptAlumniVoluntaryHourSummary.designer.cs">
+      <DependentUpon>RptAlumniVoluntaryHourSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptAttendanceAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptAttendanceAnalysis.Designer.cs">
+      <DependentUpon>RptAttendanceAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptCandidateApplicationMasterList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptCandidateApplicationMasterList.designer.cs">
+      <DependentUpon>RptCandidateApplicationMasterList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptCandidateAssessmentResultMasterList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptCandidateAssessmentResultMasterList.designer.cs">
+      <DependentUpon>RptCandidateAssessmentResultMasterList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptCandidateRegistrationMasterList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptCandidateRegistrationMasterList.designer.cs">
+      <DependentUpon>RptCandidateRegistrationMasterList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptPartTimerAssessmentResultMasterList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptPartTimerAssessmentResultMasterList.designer.cs">
+      <DependentUpon>RptPartTimerAssessmentResultMasterList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptStudentIntakeSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptStudentIntakeSummary.designer.cs">
+      <DependentUpon>RptStudentIntakeSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptStudentProgressSummaryMasterList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptStudentProgressSummaryMasterList.designer.cs">
+      <DependentUpon>RptStudentProgressSummaryMasterList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sponsor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sponsor.designer.cs">
+      <DependentUpon>Sponsor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoredProcedure.cs" />
+    <Compile Include="StoredProcedure.Designer.cs">
+      <DependentUpon>StoredProcedure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Student.Designer.cs">
+      <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCourse.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentCourse.Designer.cs">
+      <DependentUpon>StudentCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCourseAttachment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentCourseAttachment.Designer.cs">
+      <DependentUpon>StudentCourseAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCourseDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentCourseDetail.Designer.cs">
+      <DependentUpon>StudentCourseDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCourseProgress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentCourseProgress.Designer.cs">
+      <DependentUpon>StudentCourseProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentProgressSummaryDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentProgressSummaryDetail.Designer.cs">
+      <DependentUpon>StudentProgressSummaryDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentWarningLetter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentWarningLetter.Designer.cs">
+      <DependentUpon>StudentWarningLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentWarningLetterDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentWarningLetterDetail.Designer.cs">
+      <DependentUpon>StudentWarningLetterDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Subject.Designer.cs">
+      <DependentUpon>Subject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TSP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TSP.Designer.cs">
+      <DependentUpon>TSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserAccount.Designer.cs">
+      <DependentUpon>UserAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccountDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserAccountDetail.designer.cs">
+      <DependentUpon>UserAccountDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserGroup.Designer.cs">
+      <DependentUpon>UserGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoluntaryHour.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VoluntaryHour.Designer.cs">
+      <DependentUpon>VoluntaryHour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoluntaryHourDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VoluntaryHourDetail.designer.cs">
+      <DependentUpon>VoluntaryHourDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarningLetter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WarningLetter.Designer.cs">
+      <DependentUpon>WarningLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkHistory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkHistory.Designer.cs">
+      <DependentUpon>WorkHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkHistoryDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkHistoryDetail.Designer.cs">
+      <DependentUpon>WorkHistoryDetail.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EngineVariable\EngineVariable.csproj">
+      <Project>{916b606e-16dc-4a22-a9df-da9964fe3bd5}</Project>
+      <Name>EngineVariable</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
