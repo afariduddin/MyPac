@@ -113,7 +113,40 @@
                             </div>
                         </div>
                     </div>
-                    
+
+                    <div id="mnu_ScholarInformation" class="menu">
+                        <div id="tt_ScholarInformation" class="ui-menu menuHeader" onclick="ToggleDashMenu(this);">
+                            <img src="Resource/icon-student.png" height="20px" alt="Road Info" />
+                            <span class="menu-title">SCHOLAR - INFORMATION</span>
+                            <span class='triangle ui-icon ui-icon-triangle-1-n' ></span>
+                        </div>
+
+                        <div id="it_tt_ScholarInformation" class="menu-dropdown">
+                            <div>
+                                <span class='ui-icon ui-icon-triangle-1-e arrow'></span>
+                                <span class="item">Scholar - Details</span>
+                            </div>
+
+                            <div>
+                                <span class='ui-icon ui-icon-triangle-1-e arrow'></span>
+                                <span class="item">Scholar Progress - Full Time</span>
+                            </div>
+
+                            <%-- <div>
+                                <span class='ui-icon ui-icon-triangle-1-e arrow'></span>
+                                <span 
+                                    class="item" 
+                                    onclick="teq.Context.ShowPage(local.aspxContent_ProgressPartTime);">
+                                    Scholar Progress - Part Time
+                                </span>
+                            </div> --%>
+                             <div>
+                                <span class='ui-icon ui-icon-triangle-1-e arrow'></span>
+                                <span class="item" onclick="teq.Context.ShowPage(local.aspxContent_CoachingManagement);">Counselling & Monitoring</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div id="mnu_Dashb1" class="menu">
                         <div id="tt_Dash1" class="ui-menu menuHeader" onclick="ToggleDashMenu(this);">
                             <img src="Resource/icon-student.png" height="20px" alt="Road Info" />
