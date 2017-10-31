@@ -334,6 +334,7 @@ public class RegistrationListingAjaxGateway : AjaxGatewayBase
 
             CountryRow drCountry = da.Country.Get("Malaysia");
             Guid CandidateCountry = Guid.Empty;
+            String CandidateNationality = "";
 
             if (drCountry != null)
                 CandidateCountry = drCountry.Country_ID;
@@ -393,7 +394,7 @@ public class RegistrationListingAjaxGateway : AjaxGatewayBase
                     //Check Required Field
                     if (FullName == "")
                     {
-                        errs.Add(new ErrorCodes("InvalidRequiredField", "Row " + RowNumber.ToString() + ": Missing Full Name. IC - "+ IdentificationNumber));
+                        errs.Add(new ErrorCodes("InvalidRequiredField", "Row " + RowNumber.ToString() + ": Missing Full Name. IC - " + IdentificationNumber));
                         RowHasError = true;
                     }
                     if (DOB == "")
@@ -430,7 +431,10 @@ public class RegistrationListingAjaxGateway : AjaxGatewayBase
                     {
                         errs.Add(new ErrorCodes("InvalidRequiredField", "Row " + RowNumber.ToString() + ": Missing Nationality. IC - " + IdentificationNumber));
                         RowHasError = true;
+                    } else {
+                        CandidateNationality = da.Country.Get(Nationality).Country_Name;
                     }
+
                     if (Bumiputra == "")
                     {
                         errs.Add(new ErrorCodes("InvalidRequiredField", "Row " + RowNumber.ToString() + ": Missing Bumiputra. IC - " + IdentificationNumber));
@@ -492,12 +496,12 @@ public class RegistrationListingAjaxGateway : AjaxGatewayBase
                         RowHasError = true;
                     }
 
-                    EngineVariable.NationalityType CandidateNationality = LibraryCommon.ConvertNationality(Nationality);
-                    if (CandidateNationality == null)
-                    {
-                        errs.Add(new ErrorCodes("InvalidField", "Row " + RowNumber.ToString() + ": Invalid Nationality. IC - " + IdentificationNumber));
-                        RowHasError = true;
-                    }
+                    //EngineVariable.NationalityType CandidateNationality = LibraryCommon.ConvertNationality(Nationality);
+                    //if (CandidateNationality == null)
+                    //{
+                    //    errs.Add(new ErrorCodes("InvalidField", "Row " + RowNumber.ToString() + ": Invalid Nationality. IC - " + IdentificationNumber));
+                    //    RowHasError = true;
+                    //}
 
                     bool? CandidateIsBumiputra = LibraryCommon.ConvertBoolean(Bumiputra);
                     if (!CandidateIsBumiputra.HasValue)
@@ -578,7 +582,7 @@ public class RegistrationListingAjaxGateway : AjaxGatewayBase
                         dr.Candidate_UpdatedBy = WebLib.LoggedInUser.UserName;
                         dr.Candidate_Postcode = Postcode;
                         dr.Candidate_State = State;
-                        dr.Candidate_Nationality = (short)CandidateNationality;
+                        dr.Candidate_Nationality = CandidateNationality;
                         dr.Candidate_IsBumiputra = CandidateIsBumiputra.Value;
                         dr.Candidate_Remark = Remark;
                         dr.Candidate_MIA = "";

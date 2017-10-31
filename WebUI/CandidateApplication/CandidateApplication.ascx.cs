@@ -170,7 +170,7 @@ public class CandidateApplicationManagementAjaxGateway : AjaxGatewayBase
             dr.Application_MobilePhonePrefix = data.MobilePhoneNumberPrefix;
             dr.Application_MotherIdentification = data.MotherIC;
             dr.Application_MotherName = data.MotherName;
-            dr.Application_Nationality = short.Parse( NationalityType.Malaysian.Code.ToString());
+            dr.Application_Nationality = NationalityType.Malaysian.Name;
             dr.Application_NextExamSession = (data.NextExam.HasValue)? data.NextExam.Value:EngineVariable.LibraryVariable.Empty_DateTime;
             //dr.Application_PassportSizeImage = "";
             dr.Application_PGRegistrationNumber = data.PQRegNo;

@@ -582,7 +582,7 @@ public class ApplicationListingAjaxGateway : AjaxGatewayBase
                         dr.Application_MobilePhonePrefix = drCandidate.Candidate_MobilePhonePrefix;
                         dr.Application_MotherIdentification = ReqMotherIC;
                         dr.Application_MotherName = ReqMotherFullName;
-                        dr.Application_Nationality = (short)drCandidate.Candidate_Nationality;
+                        dr.Application_Nationality = drCandidate.Candidate_Nationality;
                         dr.Application_NextExamSession = (CandidateNextExam.HasValue ? CandidateNextExam.Value : EngineVariable.LibraryVariable.Empty_DateTime);
                         dr.Application_OverallProgress = (short)EngineVariable.ApplicationOverallProgressType.Application;
                         dr.Application_OverallStatus = (short)EngineVariable.ApplicationOverallStatusType.Active;
@@ -900,8 +900,10 @@ public class ApplicationListingAjaxGateway : AjaxGatewayBase
 
     void AddError(List<ErrorCodes> lis, ErrorCodes err)
     {
-        if (err.Code == ErrorCodes.GEN_NoError.Code) ;
-        else lis.Add(err);
+        //if (err.Code == ErrorCodes.GEN_NoError.Code) ;
+        //else lis.Add(err);
+        if (!(err.Code == ErrorCodes.GEN_NoError.Code))
+            lis.Add(err);
     }
 
     [AjaxMethod]

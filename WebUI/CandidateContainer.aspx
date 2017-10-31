@@ -48,6 +48,12 @@
                         <span style="color: #FFF; position: absolute; top: 50%; margin-top: -8px;">&nbsp;NEW APPLICATION</span>
                     </div>
                 </div>
+                 <div id="mnu_ApplicationForm" class="menu">
+                    <div id="tt_ApplicationForm" class="ui-menu menuHeader" onclick="teq.Context.ShowPage(local.aspxContent_CandidateApplication1);">
+                        <img src="Resource/icon-student.png" height="20px" alt="">
+                        <span style="color: #FFF; position: absolute; top: 50%; margin-top: -8px;">&nbsp;APPLICATION FORM</span>
+                    </div>
+                </div>
               <div id="mnu_Dashb8" style="color: black; width: 100%; margin: 0% 3% 3% 2%; background-color: rgb(204,204,204);">
                     <div id="tt_Dash8" class="ui-menu menuHeader" onclick="teq.Context.ShowPage(local.aspxContent_CandidateCourseMonitoring1);">
                         <img src="Resource/icon-navigation.png" height="20px" alt="" />

@@ -77,8 +77,10 @@ public class WebLib
     }
     public static void AddError(List<ErrorCodes> lis, ErrorCodes err)
     {
-        if (err.Code == ErrorCodes.GEN_NoError.Code);
-        else lis.Add(err);
+        //if (err.Code == ErrorCodes.GEN_NoError.Code);
+        //else lis.Add(err);
+        if (!(err.Code == ErrorCodes.GEN_NoError.Code))
+            lis.Add(err);
     }
 
     public static void ResponseExcelHeader(string strFilename)

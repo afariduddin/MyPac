@@ -99,9 +99,11 @@ public class FinalisedCandidateAjaxGateway : AjaxGatewayBase
         else return ErrorCodes.GEN_NoError;
     }
     [AjaxMethod]
-    public ErrorCodes VerifyNationality(int nationality)
+    //public ErrorCodes VerifyNationality(int nationality)
+    public ErrorCodes VerifyNationality(string nationality)
     {
-        if (nationality == -1) return ErrorCodes.Application_NationalityRequired;
+        //if (nationality == -1) return ErrorCodes.Application_NationalityRequired;
+        if (String.IsNullOrEmpty(nationality)) return ErrorCodes.Application_NationalityRequired;
         else return ErrorCodes.GEN_NoError;
     }
     [AjaxMethod]

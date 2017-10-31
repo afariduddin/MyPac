@@ -49,7 +49,10 @@
                         <tr><td class="gap"></td></tr>
                         <tr>
                             <td><span class="requiredfield"></span>Nationality:</td>
-                            <td><label><input type="radio" name="Nationality" id="Nationality" value="0" />Malaysian</label></td>
+                            <%--<td><label><input type="radio" name="Nationality" id="Nationality" value="0" />Malaysian</label></td>--%>
+                            <td>
+                                <select class="standardform" id="Nationality" />
+                            </td>
                         </tr>
                         <tr><td class="gap"></td></tr>
                         <tr><td class="gap"></td></tr>
@@ -430,7 +433,8 @@
                     DOB: $("#dpDOB").val(),
                     BumiPutra: $("input[name=BumiPutra]:checked").val(),
                     Gender: $("input[name=Gender]:checked").val(),
-                    Nationality: $("input[name=Nationality]:checked").val(),
+                    //Nationality: $("input[name=Nationality]:checked").val(),
+                    Nationality: $("#Nationality").find("option:selected").text(),
                     IC: $('#IC').val(),
                     CurrentlyEmployed: $("input[name=CurrentlyEmployed]:checked").val(),
                     EducationLevel1: $('#EducationLevel1').val(),
@@ -509,6 +513,17 @@
                 });
                 return false;
             });
+
+            $('#Nationality').dropdownSelect({
+                nullLabel: "- Select Country -",
+                nullValue: GuidEmpty
+            });
+
+            CandidateRegistrationManagementAjaxGateway.GetCountryList(function (res) {
+                $('#Nationality').dropdownSelect("option", "choices", teq.Common.DictionaryToArray(res.value));
+                $("#Nationality option:contains(" + "Malaysia" + ")").attr('selected', 'selected');
+            });
+
             $('#Sector').dropdownSelect({
                          nullLabel: "- Select Sector -",
                          nullValue: ""

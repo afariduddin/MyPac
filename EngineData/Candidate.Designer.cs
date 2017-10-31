@@ -343,7 +343,8 @@ Candidate_StateCol.ReadOnly = false;
 Candidate_StateCol.AllowDBNull = false;
 Columns.Add(Candidate_StateCol);
 // column Candidate_Nationality
-DataColumn Candidate_NationalityCol = new DataColumn("Candidate_Nationality", typeof(System.Int32));
+//DataColumn Candidate_NationalityCol = new DataColumn("Candidate_Nationality", typeof(System.Int32));
+DataColumn Candidate_NationalityCol = new DataColumn("Candidate_Nationality", typeof(System.String));
 Candidate_NationalityCol.ReadOnly = false;
 Candidate_NationalityCol.AllowDBNull = false;
 Columns.Add(Candidate_NationalityCol);
@@ -469,7 +470,7 @@ row.Candidate_UpdatedDate = DateTime.Now;
 row.Candidate_UpdatedBy = "";
 row.Candidate_Postcode = "";
 row.Candidate_State = "";
-row.Candidate_Nationality = 0;
+row.Candidate_Nationality = "";
 row.Candidate_IsBumiputra = false;
 row.Candidate_Remark = "";
 row.Candidate_OtherEthnicity = "";
@@ -962,9 +963,9 @@ if( value.Length > 50 ) this["Candidate_State"] = value.Substring(0, 50);
 else this["Candidate_State"] = value;
 }
 }
-public System.Int32 Candidate_Nationality {
+public System.String Candidate_Nationality {
 get {
-return (System.Int32)this["Candidate_Nationality"];
+return (System.String)this["Candidate_Nationality"];
 }
 set {
 this["Candidate_Nationality"] = value;
@@ -1266,7 +1267,7 @@ public System.DateTime Candidate_UpdatedDate;
 public System.String Candidate_UpdatedBy;
 public System.String Candidate_Postcode;
 public System.String Candidate_State;
-public System.Int32 Candidate_Nationality;
+public System.String Candidate_Nationality;
 public System.Boolean Candidate_IsBumiputra;
 public System.String Candidate_Remark;
 public System.String Candidate_OtherEthnicity;

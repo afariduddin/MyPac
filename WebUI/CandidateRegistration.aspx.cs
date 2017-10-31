@@ -175,7 +175,7 @@ public class CandidateRegistrationManagementAjaxGateway : AjaxGatewayBase
             dr.Candidate_ICNumber = data.IC;
             dr.Candidate_MobilePhoneNumber = data.MobilePhoneNumber;
             dr.Candidate_MobilePhonePrefix = data.MobilePhoneNumberPrefix;
-            dr.Candidate_Nationality = EngineVariable.NationalityType.Malaysian.Code;
+            dr.Candidate_Nationality = data.Nationality;
             dr.Candidate_Password = data.Password;
             dr.Candidate_PhoneNumber = data.PhoneNumber;
             dr.Candidate_PhonePrefix = data.PhoneNumberPrefix;

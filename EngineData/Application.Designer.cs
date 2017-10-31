@@ -122,7 +122,7 @@ Application_GenderCol.ReadOnly = false;
 Application_GenderCol.AllowDBNull = false;
 Columns.Add(Application_GenderCol);
 // column Application_Nationality
-DataColumn Application_NationalityCol = new DataColumn("Application_Nationality", typeof(System.Int16));
+DataColumn Application_NationalityCol = new DataColumn("Application_Nationality", typeof(System.String));
 Application_NationalityCol.ReadOnly = false;
 Application_NationalityCol.AllowDBNull = false;
 Columns.Add(Application_NationalityCol);
@@ -490,7 +490,7 @@ row.Application_FullName = "";
 row.Candidate_ID = Guid.Empty;
 row.Application_DOB = DateTime.Now;
 row.Application_Gender = 0;
-row.Application_Nationality = 0;
+row.Application_Nationality = "";
 row.Application_IdentificationNumber = "";
 row.Application_Address1 = "";
 row.Application_Address2 = "";
@@ -627,9 +627,9 @@ set {
 this["Application_Gender"] = value;
 }
 }
-public System.Int16 Application_Nationality {
+public System.String Application_Nationality {
 get {
-return (System.Int16)this["Application_Nationality"];
+return (System.String)this["Application_Nationality"];
 }
 set {
 this["Application_Nationality"] = value;
@@ -1384,7 +1384,7 @@ public System.String Application_FullName;
 public System.Guid Candidate_ID;
 public System.DateTime Application_DOB;
 public System.Int16 Application_Gender;
-public System.Int16 Application_Nationality;
+public System.String Application_Nationality;
 public System.String Application_IdentificationNumber;
 public System.String Application_Address1;
 public System.String Application_Address2;
@@ -1556,7 +1556,7 @@ adapter.InsertCommand.Parameters.Add("@Application_FullName", SqlDbType.NVarChar
 adapter.InsertCommand.Parameters.Add("@Candidate_ID", SqlDbType.UniqueIdentifier, 0, "Candidate_ID");
 adapter.InsertCommand.Parameters.Add("@Application_DOB", SqlDbType.DateTime, 0, "Application_DOB");
 adapter.InsertCommand.Parameters.Add("@Application_Gender", SqlDbType.SmallInt, 0, "Application_Gender");
-adapter.InsertCommand.Parameters.Add("@Application_Nationality", SqlDbType.SmallInt, 0, "Application_Nationality");
+adapter.InsertCommand.Parameters.Add("@Application_Nationality", SqlDbType.NVarChar, 0, "Application_Nationality");
 adapter.InsertCommand.Parameters.Add("@Application_IdentificationNumber", SqlDbType.NVarChar, 0, "Application_IdentificationNumber");
 adapter.InsertCommand.Parameters.Add("@Application_Address1", SqlDbType.NVarChar, 0, "Application_Address1");
 adapter.InsertCommand.Parameters.Add("@Application_Address2", SqlDbType.NVarChar, 0, "Application_Address2");
@@ -1635,7 +1635,7 @@ adapter.UpdateCommand.Parameters.Add("@Application_FullName", SqlDbType.NVarChar
 adapter.UpdateCommand.Parameters.Add("@Candidate_ID", SqlDbType.UniqueIdentifier, 0, "Candidate_ID");
 adapter.UpdateCommand.Parameters.Add("@Application_DOB", SqlDbType.DateTime, 0, "Application_DOB");
 adapter.UpdateCommand.Parameters.Add("@Application_Gender", SqlDbType.SmallInt, 0, "Application_Gender");
-adapter.UpdateCommand.Parameters.Add("@Application_Nationality", SqlDbType.SmallInt, 0, "Application_Nationality");
+adapter.UpdateCommand.Parameters.Add("@Application_Nationality", SqlDbType.NVarChar, 0, "Application_Nationality");
 adapter.UpdateCommand.Parameters.Add("@Application_IdentificationNumber", SqlDbType.NVarChar, 0, "Application_IdentificationNumber");
 adapter.UpdateCommand.Parameters.Add("@Application_Address1", SqlDbType.NVarChar, 0, "Application_Address1");
 adapter.UpdateCommand.Parameters.Add("@Application_Address2", SqlDbType.NVarChar, 0, "Application_Address2");
