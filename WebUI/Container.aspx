@@ -132,14 +132,14 @@
                                 <span class="item">Scholar Progress - Full Time</span>
                             </div>
 
-                            <%-- <div>
+                            <div>
                                 <span class='ui-icon ui-icon-triangle-1-e arrow'></span>
                                 <span 
                                     class="item" 
                                     onclick="teq.Context.ShowPage(local.aspxContent_ProgressPartTime);">
                                     Scholar Progress - Part Time
                                 </span>
-                            </div> --%>
+                            </div> 
                              <div>
                                 <span class='ui-icon ui-icon-triangle-1-e arrow'></span>
                                 <span class="item" onclick="teq.Context.ShowPage(local.aspxContent_CoachingManagement);">Counselling & Monitoring</span>
@@ -165,6 +165,43 @@
                             <div>
                                 <span class='ui-icon ui-icon-triangle-1-e arrow'></span>
                                 <span class="item" onclick="teq.Context.ShowPage(local.aspxContent_CoachingManagement);">Counselling / Mentoring</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="mnu_Finance" class="menu">
+                        <div id="tt_Finance" class="ui-menu menuHeader" onclick="ToggleDashMenu(this);">
+                            <img src="Resource/icon-student.png" height="20px" alt="Calculator" />
+                            <span class="menu-title">FINANCE</span>
+                            <span class='triangle ui-icon ui-icon-triangle-1-n' ></span>
+                        </div>
+
+                        <div id="it_tt_Finance" class="menu-dropdown">
+                             <div>
+                                <span class='ui-icon ui-icon-triangle-1-e arrow'></span>
+                                <span class="item">Total Allocation - Full Time</span>
+                            </div>
+
+                            <div>
+                                <span class='ui-icon ui-icon-triangle-1-e arrow'></span>
+                                <span 
+                                    class="item" 
+                                    onclick="teq.Context.ShowPage(local.aspxContent_ProgressPartTime);">
+                                    Total Allocation - Part Time
+                                </span> 
+                            </div>
+                             <div>
+                                <span class='ui-icon ui-icon-triangle-1-e arrow'></span>
+                                <span class="item">Total Disbursement - Full Time</span>
+                            </div>
+
+                            <div>
+                                <span class='ui-icon ui-icon-triangle-1-e arrow'></span>
+                                <span 
+                                    class="item" 
+                                    onclick="teq.Context.ShowPage(local.aspxContent_ProgressPartTime);">
+                                    Total Disbursement - Part Time
+                                </span> 
                             </div>
                         </div>
                     </div>
