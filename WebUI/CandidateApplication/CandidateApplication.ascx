@@ -404,7 +404,7 @@
                         <tr><td class="gap"></td></tr>
                         <tr><td class="gap"></td></tr>
                         <tr>
-                            <td><span class="requiredfield"></span>Phone Number:</td>
+                            <td><%--<span class="requiredfield"></span> --%>Phone Number:</td>
                             <td><input class="standardform" style="width:50px;" type="text" id="PhoneNumberPrefix" placeholder="03"/> - <input class="standardform" style="width:215px;" id="PhoneNumber" type="text" placeholder="12345678"/> </td>
                         </tr>
                         <tr><td class="gap"></td></tr>
