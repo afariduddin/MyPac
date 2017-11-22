@@ -33,6 +33,7 @@ public class CandidateChangeProfileAjaxGateway : AjaxGatewayBase
             data.Sector = GetGlobalSetting((int)EngineVariable.GlobalSettingType.Sector);
             data.Position = GetGlobalSetting((int)EngineVariable.GlobalSettingType.Position);
             data.Country = GetCountryList();
+            data.Nationality = GetNationalityList();
         }
         return data;
     }
@@ -46,6 +47,20 @@ public class CandidateChangeProfileAjaxGateway : AjaxGatewayBase
         foreach (CountryRow r in dtCountry.Rows)
         {
             lis.Add(r.Country_ID.ToString(), r.Country_Name);
+        }
+
+        return lis;
+    }
+
+    [AjaxMethod]
+    public Dictionary<string, string> GetNationalityList()
+    {
+        Dictionary<string, string> lis = new Dictionary<string, string>();
+        DA da = new DA();
+        CountryTable dtCountry = da.Country.GetAll();
+        foreach (CountryRow r in dtCountry.Rows)
+        {
+            lis.Add(r.Country_Name, r.Country_Name);
         }
 
         return lis;
@@ -172,5 +187,6 @@ public class CandidateDialogData
     public Dictionary<string, string> Position;
     public Dictionary<string, string> Sector;
     public Dictionary<string, string> Country;
+    public Dictionary<string, string> Nationality;
     //public Dictionary<string, string> UserGroup;
 }
